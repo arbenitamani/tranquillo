@@ -44,6 +44,11 @@ class RegistrationForm extends Component {
             Password:
             <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} required />
           </label>
+          <label>
+            Confirm Password:
+            <input type="password" name="Confirm Password" value={this.state.password} onChange={this.handleInputChange} required />
+          </label>
+
 
           <label>
             Email:

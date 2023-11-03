@@ -1,11 +1,19 @@
 import React from 'react';
-import Register from './Register.js'; // Use a relative import path
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from './register.js'; // Use a relative import path
+import Login from './login.js';
 function App() {
   return (
     <div className="App">
-      {/* Your main application code */}
-      <Register /> {/* Use the Register component in your JSX */}
+        <Router>
+        <Routes>
+
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+      </Routes>
+      </Router>
+
+      
     </div>
   );
 }
