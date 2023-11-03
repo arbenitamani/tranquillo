@@ -7,6 +7,14 @@ const cors=require("cors");
 const db=mysql.createPool({
     host:"localhost",
     user:"root",
-    password:"",
+    password:"password",
     database:"tranquillo",
 });
+db.getConnection((err,connection)=>{
+    if(err){
+        console.error("Error connecting to MYSQL server:",err);
+    }else{
+        console.log("Connected to MYSQL server.");
+    }
+    connection.release();
+})
